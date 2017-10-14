@@ -6,6 +6,7 @@ import Foundation
 
 public func solution(_ A : inout [Int]) -> Int {
     var answer = 0
+    var flag = 0
     for ele in A {
         answer ^= ele
     }
