@@ -24,3 +24,4 @@ public func solution(_ N : Int) -> Int {
     }
     return answer
 }
+
