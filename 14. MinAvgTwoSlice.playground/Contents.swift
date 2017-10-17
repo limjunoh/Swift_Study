@@ -28,3 +28,6 @@ public func solution(_ A : inout [Int]) -> Int {
     
     return startIndex
 }
+
+var good = [5,4,3,2,1]
+print(solution(&good))
