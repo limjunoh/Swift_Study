@@ -10,7 +10,8 @@ public func solution(_ A : inout [Int]) -> Int {
     var startIndex = 0
     
     for i in 2..<A.count {
-        var avg = Double(A[i-2] + A[i-1] + A[i]) / 3.0
+        let value = A[i-2] + A[i-1] + A[i]
+        var avg = Double(value) / 3.0
         
         if avg < minAvg {
             minAvg = avg
