@@ -6,14 +6,21 @@ import Foundation
 public func solution(_ A : inout [Int]) -> Int {
     // write your code in Swift 3.0 (Linux)
     var answer = 0
-    for i in 0..<A.count-1 {
-        for j in i+1..<A.count {
-            if (A[i] + i) >= (A[j] - j) {
+    var N = A.count
+    if N < 1 {
+        return 0
+    }
+    for i in 0..<N-1 {
+        for j in i+1..<N {
+            if (i + A[i]) >= (j - A[j]) {
                 answer += 1
             }
         }
     }
     
+    if answer > 10_000_000 {
+        return -1
+    }
     return answer
 }
 
